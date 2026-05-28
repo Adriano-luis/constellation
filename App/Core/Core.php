@@ -1,4 +1,5 @@
 <?php
+namespace App\Core;
 
 class Core {
     public function run() {
@@ -13,7 +14,7 @@ class Core {
             $url = explode('/', $url);
             array_shift($url);
 
-            $currentController = ucfirst($url[0]).'Controller';
+            $currentController = 'App\\Controllers\\'.ucfirst($url[0]).'Controller';
             array_shift($url);
 
             if(isset($url[0]) && $url[0] != '/') {
@@ -27,8 +28,14 @@ class Core {
                 $params = $url;
             }
         } else {
-            $currentController = 'HomeController';
+            $currentController = 'App\\Controllers\\HomeController';;
             $currentAction = 'index';
+        }
+
+        if (!class_exists($currentController)) {
+            http_response_code(404);
+            echo "Page not found";
+            exit;
         }
 
         $c = new $currentController();

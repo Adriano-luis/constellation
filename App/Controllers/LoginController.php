@@ -1,9 +1,11 @@
-<?php 
-class LoginController extends Controller { 
+<?php
+namespace App\Controllers;
 
-    public function __construct() {
-        // parent::__construct();
-    }
+use App\Core\Controller;
+use App\Models\User;
+use App\Services\AuthService;
+
+class LoginController extends Controller { 
 
     public function index() {
         $data = array();

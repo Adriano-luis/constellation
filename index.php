@@ -1,26 +1,10 @@
 <?php
 session_start();
 
-require "config.php";
+require __DIR__.'/vendor/autoload.php';
+require __DIR__.'/config.php';
 
-spl_autoload_register(function($class) {
-    $folders = array(
-        'controllers/',
-        'models/',
-        'core/',
-        'services/',
-        'traits/'
-    );
-
-    foreach ($folders as $folder) {
-        $file = $folder.$class.'.php';
-
-        if (file_exists($file)) {
-            require $file;
-            return;
-        }
-    }
-});
+use App\Core\Core;
 
 $core = new Core();
 $core->run();

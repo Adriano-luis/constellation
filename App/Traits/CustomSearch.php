@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Traits;
+
 trait CustomSearch {
     protected function filtered(array $columns, string $search): array {
         $where = '';

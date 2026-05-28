@@ -1,5 +1,10 @@
 <?php
 
+namespace App\services;
+
+Use App\Core\Model;
+use PDO;
+
 class AuthService extends Model {
 
     public function isLogged() {
