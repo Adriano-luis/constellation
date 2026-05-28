@@ -3,7 +3,8 @@ require "environment.php";
 
 $config = array();
 
-if(ENVIRONMENT == 'development') { 
+if(ENVIRONMENT == 'development') {
+    define("BASE_URL", "http://localhost:8000/");
     $config['dbname'] = DBNAME;
     $config['host'] = DBHOST;
     $config['dbuser'] = DBUSER;
