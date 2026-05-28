@@ -1,4 +1,22 @@
-<footer>
-    <h3>footer</h3>
-    <script src="<?php echo BASE_URL; ?>assets/js/scripts.css"></script>
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <div class="footer-text">
+            <p>
+                &copy; <?= date('Y'); ?> Constellation Automotive Group
+            </p>
+        </div>
+
+        <div class="footer-wave">
+            <svg width="607" height="193" viewBox="0 0 607 193" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M353.682 46.9642L373.423 61.7986L366.742 40.0514L506.841 83.4154L491.48 94.969L512.859 94.6156L519.802 114.839L525.38 96.6538L578.261 167.162L564.758 166.954L577.585 176.579L572.395 191.752L585.512 182.527L598.339 192.152L593.619 176.826L606.737 167.601L590.702 167.354L585.982 152.028L582.749 161.48L532.359 94.2933L547.451 94.0438L529.947 81.7633L536.218 61.3213L519.129 74.1736L501.626 61.8931L506.458 75.9689L371.753 34.2745L386.38 24.0025L361.69 23.605L354.438 0L346.43 23.3593L321.74 22.9617L335.773 33.5065L148.439 92.9397L154.429 76.678L133.904 90.4073L114.504 75.1291L119.512 92.8529L42.1711 68.3834L52.5837 60.8182H32.4985L26.2918 41.7161L20.0852 60.8182H0L16.2493 72.624L10.0426 91.7261L26.2918 79.9203L42.5411 91.7261L36.7889 74.0226L119.349 100.143L100.693 112.622L125.369 113.579L132.083 137.342L140.619 114.171L165.294 115.128L147.018 100.735L341.003 39.191L333.473 61.1554L353.682 46.9642Z" fill="url(#paint0_linear)"></path>
+
+                <defs>
+                    <linearGradient id="paint0_linear" x1="-1.44772e-06" y1="69.4575" x2="606.635" y2="179.967" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#E30052"></stop>
+                        <stop offset="1" stop-color="#74257B"></stop>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+    </div>
 </footer>

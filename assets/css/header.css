@@ -1,0 +1,21 @@
+.site-header {
+    background:rgb(255, 255, 255);
+}
+
+.header-inner {
+    display: flex;
+    min-height: 76px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-nav a {
+    font-size: 14px;
+    color: rgb(21, 16, 43);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}

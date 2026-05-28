@@ -1,0 +1,80 @@
+.page-content {
+    min-height: calc(100vh - 156px);
+    padding: 48px 0;
+}
+
+.page-title {
+    margin-bottom: 24px;
+}
+
+.page-title h1 {
+    margin: 0 0 6px;
+    font-size: 32px;
+}
+
+.page-title p {
+    margin: 0;
+    color: #65717c;
+}
+
+.filter-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.filter-form input {
+    width: 320px;
+    padding: 11px 12px;
+    font-size: 14px;
+    border: 1px solid #cfd6dd;
+    border-radius: 4px;
+}
+
+.filter-form button {
+    padding: 11px 18px;
+    color: #ffffff;
+    font-weight: 600;
+    background: rgb(21, 16, 43);
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+}
+
+.clear-link {
+    align-self: center;
+    color: #061b2e;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.users-table {
+    width: 100%;
+    background: #ffffff;
+    border-collapse: collapse;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.users-table th,
+.users-table td {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #e3e8ed;
+}
+
+.users-table th {
+    color: #ffffff;
+    font-weight: 600;
+    background: rgb(21, 16, 43);
+}
+
+.users-table tr:hover td {
+    background: #f8fbfc;
+}
+
+.empty-row {
+    text-align: center;
+    color: #65717c;
+}
+

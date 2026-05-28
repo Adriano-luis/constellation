@@ -15,7 +15,7 @@ class User extends Model
     {
         $filter = $this->filtered($this->searchable, $search);
 
-        $query = "SELECT id, username, email FROM ".$this->table;
+        $query = "SELECT id, username, email, created_at, updated_at FROM ".$this->table;
 
         if (!empty($filter['where'])) {
             $query .= " ".$filter['where'];
@@ -32,5 +32,24 @@ class User extends Model
         $sql->execute();
 
         return $sql->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function emailExists(string $email) : bool {
+        $sql = $this->db->prepare("SELECT id FROM users WHERE email = :email LIMIT 1");
+        $sql->bindValue(':email', $email);
+        $sql->execute();
+
+        return $sql->rowCount() > 0;
+    }
+
+    public function create(string $name, string $email, string $password): bool {
+        $password = password_hash($password, PASSWORD_DEFAULT);
+
+        $sql = $this->db->prepare("INSERT INTO users (username, email, password) VALUES (:username, :email, :password)");
+        $sql->bindValue(':username', $name);
+        $sql->bindValue(':email', $email);
+        $sql->bindValue(':password', $password);
+
+        return $sql->execute();
     }
 }

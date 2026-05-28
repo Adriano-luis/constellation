@@ -1,37 +1,50 @@
-<form method="GET">
-    <input
-        type="text"
-        name="search"
-        placeholder="Search by username or email"
-        value="<?= htmlspecialchars($search ?? '', ENT_QUOTES, 'UTF-8'); ?>"
-    >
+<main class="page-content">
+    <div class="container">
+        <div class="page-title">
+            <h1>Users</h1>
+            <p>Manage registered users.</p>
+        </div>
 
-    <button type="submit">Search</button>
-    <a href="<?= BASE_URL; ?>">Clear</a>
-</form>
+        <form method="GET" class="filter-form">
+            <input
+                type="text"
+                name="search"
+                placeholder="Search by username or email"
+                value="<?= htmlspecialchars($search ?? '', ENT_QUOTES, 'UTF-8'); ?>"
+            >
 
-<table border="1" cellpadding="8" cellspacing="0">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Username</th>
-            <th>Email</th>
-        </tr>
-    </thead>
+            <button type="submit">Search</button>
+            <a href="<?= BASE_URL; ?>" class="clear-link">Clear</a>
+        </form>
 
-    <tbody>
-        <?php if (!empty($users)): ?>
-            <?php foreach ($users as $user): ?>
+        <table class="users-table">
+            <thead>
                 <tr>
-                    <td><?= htmlspecialchars($user['id']); ?></td>
-                    <td><?= htmlspecialchars($user['username']); ?></td>
-                    <td><?= htmlspecialchars($user['email']); ?></td>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Created at</th>
+                    <th>Updated at</th>
                 </tr>
-            <?php endforeach; ?>
-        <?php else: ?>
-            <tr>
-                <td colspan="3">Nenhum usuário encontrado.</td>
-            </tr>
-        <?php endif; ?>
-    </tbody>
-</table>
+            </thead>
+
+            <tbody>
+                <?php if (!empty($users)): ?>
+                    <?php foreach ($users as $user): ?>
+                        <tr>
+                            <td><?= htmlspecialchars($user['id'], ENT_QUOTES, 'UTF-8'); ?></td>
+                            <td><?= htmlspecialchars($user['username'], ENT_QUOTES, 'UTF-8'); ?></td>
+                            <td><?= htmlspecialchars($user['email'], ENT_QUOTES, 'UTF-8'); ?></td>
+                            <td><?= htmlspecialchars(date('m/d/Y H:i', strtotime($user['created_at'])),ENT_QUOTES, 'UTF-8'); ?></td>
+                            <td><?= htmlspecialchars(date('m/d/Y H:i', strtotime($user['updated_at'])),ENT_QUOTES, 'UTF-8'); ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <tr>
+                        <td colspan="5" class="empty-row">No users found.</td>
+                    </tr>
+                <?php endif; ?>
+            </tbody>
+        </table>
+    </div>
+</main>

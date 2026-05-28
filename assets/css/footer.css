@@ -1,0 +1,35 @@
+.site-footer {
+    background: rgb(21, 16, 43);
+    overflow: hidden;
+}
+
+.footer-inner {
+    min-height: 140px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.footer-text p {
+    margin: 0;
+
+    color: rgba(255,255,255,0.75);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-wave {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-wave svg {
+    width: 320px;
+    height: auto;
+
+    opacity: 0.95;
+}
