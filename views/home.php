@@ -29,22 +29,50 @@
             </thead>
 
             <tbody>
-                <?php if (!empty($users)): ?>
+                <?php if (count($users) > 0): ?>
                     <?php foreach ($users as $user): ?>
                         <tr>
                             <td><?= htmlspecialchars($user['id'], ENT_QUOTES, 'UTF-8'); ?></td>
                             <td><?= htmlspecialchars($user['username'], ENT_QUOTES, 'UTF-8'); ?></td>
-                            <td><?= htmlspecialchars($user['email'], ENT_QUOTES, 'UTF-8'); ?></td>
-                            <td><?= htmlspecialchars(date('m/d/Y H:i', strtotime($user['created_at'])),ENT_QUOTES, 'UTF-8'); ?></td>
-                            <td><?= htmlspecialchars(date('m/d/Y H:i', strtotime($user['updated_at'])),ENT_QUOTES, 'UTF-8'); ?></td>
+                            <td>
+                                <?= htmlspecialchars($user['email'], ENT_QUOTES, 'UTF-8'); ?>
+                            </td>
+                            <td>
+                                <?= htmlspecialchars(
+                                    date('m/d/Y H:i', strtotime($user['created_at'])),
+                                    ENT_QUOTES,
+                                    'UTF-8'
+                                ); ?>
+                            </td>
+                            <td>
+                                <?= htmlspecialchars(
+                                    date('m/d/Y H:i', strtotime($user['updated_at'])),
+                                    ENT_QUOTES,
+                                    'UTF-8'
+                                ); ?>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 <?php else: ?>
                     <tr>
-                        <td colspan="5" class="empty-row">No users found.</td>
+                        <td colspan="5" class="empty-row">
+                            No users found.
+                        </td>
                     </tr>
                 <?php endif; ?>
             </tbody>
+            <?php if ($pages > 1): ?>
+                <div class="pagination">
+                    <?php for ($i = 1; $i <= $pages; $i++): ?>
+                        <a
+                            href="<?= BASE_URL; ?>?search=<?= urlencode($search); ?>&page=<?= $i; ?>"
+                            class="<?= ($i == $page) ? 'active' : ''; ?>"
+                        >
+                            <?= $i; ?>
+                        </a>
+                    <?php endfor; ?>
+                </div>
+            <?php endif; ?>
         </table>
     </div>
 </main>

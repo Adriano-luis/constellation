@@ -11,28 +11,55 @@ class User extends Model
         'email'
     );
 
-    public function getAll(string $search = ''): array
-    {
-        $filter = $this->filtered($this->searchable, $search);
+   public function getAll(string $search = '', int $offset = 0, int $limit = 10): array
+{
+    $filter = $this->filtered($this->searchable, $search);
 
-        $query = "SELECT id, username, email, created_at, updated_at FROM ".$this->table;
+    $query = "SELECT id, username, email, created_at, updated_at FROM ".$this->table;
 
-        if (!empty($filter['where'])) {
-            $query .= " ".$filter['where'];
-        }
-
-        $query .= " ORDER BY id DESC";
-
-        $sql = $this->db->prepare($query);
-
-        foreach ($filter['params'] as $param => $value) {
-            $sql->bindValue($param, $value);
-        }
-
-        $sql->execute();
-
-        return $sql->fetchAll(PDO::FETCH_ASSOC);
+    if (!empty($filter['where'])) {
+        $query .= " ".$filter['where'];
     }
+
+    $query .= " ORDER BY id DESC";
+    $query .= " LIMIT :offset, :limit";
+
+    $sql = $this->db->prepare($query);
+
+    foreach ($filter['params'] as $param => $value) {
+        $sql->bindValue($param, $value);
+    }
+
+    $sql->bindValue(':offset', $offset, PDO::PARAM_INT);
+    $sql->bindValue(':limit', $limit, PDO::PARAM_INT);
+
+    $sql->execute();
+
+    return $sql->fetchAll(PDO::FETCH_ASSOC);
+}
+
+public function getTotal(string $search = ''): int
+{
+    $filter = $this->filtered($this->searchable, $search);
+
+    $query = "SELECT COUNT(*) as total FROM ".$this->table;
+
+    if (!empty($filter['where'])) {
+        $query .= " ".$filter['where'];
+    }
+
+    $sql = $this->db->prepare($query);
+
+    foreach ($filter['params'] as $param => $value) {
+        $sql->bindValue($param, $value);
+    }
+
+    $sql->execute();
+
+    $row = $sql->fetch(PDO::FETCH_ASSOC);
+
+    return (int) $row['total'];
+}
 
     public function emailExists(string $email) : bool {
         $sql = $this->db->prepare("SELECT id FROM users WHERE email = :email LIMIT 1");
