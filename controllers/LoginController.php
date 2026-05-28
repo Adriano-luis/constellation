@@ -29,4 +29,12 @@ class LoginController extends Controller {
 
         $this->loadView('login', $data);
     }
+
+    public function logout() {
+        $auth = new AuthService();
+        $auth->logout();
+
+        header("Location: ".BASE_URL.'login');
+        exit;
+    }
 }

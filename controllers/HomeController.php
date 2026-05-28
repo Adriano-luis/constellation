@@ -7,7 +7,15 @@ class HomeController extends Controller
         $auth->requireLogin();
     }
 
-    public function index() {
-        $this->loadMaster('home');
+   public function index() {
+        $data = array();
+
+        $search = $_GET['search'] ?? '';
+        $users = new User();
+
+        $data['search'] = $search;
+        $data['users'] = $users->getAll($search);
+
+        $this->loadMaster('home', $data);
     }
 }

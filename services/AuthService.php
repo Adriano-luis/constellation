@@ -38,5 +38,7 @@ class AuthService extends Model {
     public function logout() {
         unset($_SESSION['authuser']);
         session_destroy();
+
+        return true;
     }
 }

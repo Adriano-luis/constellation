@@ -8,7 +8,8 @@ spl_autoload_register(function($class) {
         'controllers/',
         'models/',
         'core/',
-        'services/'
+        'services/',
+        'traits/'
     );
 
     foreach ($folders as $folder) {
