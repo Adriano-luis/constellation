@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/adrianooliveira/monstros/constellation/App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="_css/bootstrap.min.css?v=14.1.9" rel="stylesheet" type="text/css">
+  <link href="_css/style.css?v=14.1.9" rel="stylesheet" type="text/css">
+  <link href="_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">/home/adrianooliveira/monstros/constellation/App</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row dashboard-row">
+    <div class="col-md-6">
+     <h3>Classes</h3>
+     <p class="text-muted small">Bubble size = executable lines. Hover for details, click to navigate.</p>
+     <div class="file-coverage-chart">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
+ <style>
+  .bubble-success { fill: var(--phpunit-success-bar); opacity: 0.7; }
+  .bubble-warning { fill: var(--phpunit-warning-bar); opacity: 0.7; }
+  .bubble-danger { fill: var(--phpunit-danger-bar); opacity: 0.7; }
+  .bubble-success:hover, .bubble-warning:hover, .bubble-danger:hover { opacity: 1; stroke: var(--bs-emphasis-color); stroke-width: 1.5; }
+  .chart-grid { stroke: var(--bs-border-color); stroke-width: 0.5; stroke-dasharray: 4,4; opacity: 0.5; }
+  .chart-axis { stroke: var(--bs-border-color); stroke-width: 1; }
+  .chart-label { fill: var(--bs-body-color); font-size: 11px; font-family: var(--bs-font-sans-serif, sans-serif); }
+  .chart-title { fill: var(--bs-body-color); font-size: 12px; font-family: var(--bs-font-sans-serif, sans-serif); }
+ </style>
+ <line x1="60.0" y1="20" x2="60.0" y2="350" class="chart-grid"/>
+ <text x="60.0" y="368" text-anchor="middle" class="chart-label">0%</text>
+ <line x1="204.0" y1="20" x2="204.0" y2="350" class="chart-grid"/>
+ <text x="204.0" y="368" text-anchor="middle" class="chart-label">20%</text>
+ <line x1="348.0" y1="20" x2="348.0" y2="350" class="chart-grid"/>
+ <text x="348.0" y="368" text-anchor="middle" class="chart-label">40%</text>
+ <line x1="492.0" y1="20" x2="492.0" y2="350" class="chart-grid"/>
+ <text x="492.0" y="368" text-anchor="middle" class="chart-label">60%</text>
+ <line x1="636.0" y1="20" x2="636.0" y2="350" class="chart-grid"/>
+ <text x="636.0" y="368" text-anchor="middle" class="chart-label">80%</text>
+ <line x1="780.0" y1="20" x2="780.0" y2="350" class="chart-grid"/>
+ <text x="780.0" y="368" text-anchor="middle" class="chart-label">100%</text>
+ <line x1="60" y1="350.0" x2="780" y2="350.0" class="chart-grid"/>
+ <text x="52" y="350.0" text-anchor="end" dominant-baseline="middle" class="chart-label">0</text>
+ <line x1="60" y1="267.5" x2="780" y2="267.5" class="chart-grid"/>
+ <text x="52" y="267.5" text-anchor="end" dominant-baseline="middle" class="chart-label">5</text>
+ <line x1="60" y1="185.0" x2="780" y2="185.0" class="chart-grid"/>
+ <text x="52" y="185.0" text-anchor="end" dominant-baseline="middle" class="chart-label">10</text>
+ <line x1="60" y1="102.5" x2="780" y2="102.5" class="chart-grid"/>
+ <text x="52" y="102.5" text-anchor="end" dominant-baseline="middle" class="chart-label">15</text>
+ <line x1="60" y1="20.0" x2="780" y2="20.0" class="chart-grid"/>
+ <text x="52" y="20.0" text-anchor="end" dominant-baseline="middle" class="chart-label">20</text>
+ <line x1="60" y1="20" x2="60" y2="350" class="chart-axis"/>
+ <line x1="60" y1="350" x2="780" y2="350" class="chart-axis"/>
+ <text x="420.0" y="395" text-anchor="middle" class="chart-title">Line Coverage (%)</text>
+ <text x="15" y="185.0" text-anchor="middle" transform="rotate(-90, 15, 185.0)" class="chart-title">Cyclomatic Complexity</text>
+ <a href="Controllers/LoginController.php.html#8"><circle cx="60.0" cy="86.0" r="20.0" class="bubble-danger"><title>App\Controllers\LoginController — Coverage: 0.0% | Lines: 49 | Complexity: 16</title></circle></a>
+ <a href="Models/User.php.html#9"><circle cx="60.0" cy="218.0" r="16.4" class="bubble-danger"><title>App\Models\User — Coverage: 0.0% | Lines: 33 | Complexity: 8</title></circle></a>
+ <a href="Core/Core.php.html#4"><circle cx="60.0" cy="218.0" r="13.7" class="bubble-danger"><title>App\Core\Core — Coverage: 0.0% | Lines: 23 | Complexity: 8</title></circle></a>
+ <a href="Controllers/HomeController.php.html#9"><circle cx="60.0" cy="300.5" r="12.1" class="bubble-danger"><title>App\Controllers\HomeController — Coverage: 0.0% | Lines: 18 | Complexity: 3</title></circle></a>
+ <a href="Services/AuthService.php.html#8"><circle cx="220.0" cy="218.0" r="12.1" class="bubble-danger"><title>App\Services\AuthService — Coverage: 22.2% | Lines: 18 | Complexity: 8</title></circle></a>
+ <a href="Traits/CustomSearch.php.html#5"><circle cx="60.0" cy="284.0" r="10.7" class="bubble-danger"><title>App\Traits\CustomSearch — Coverage: 0.0% | Lines: 14 | Complexity: 4</title></circle></a>
+ <a href="Core/Controller.php.html#5"><circle cx="60.0" cy="300.5" r="6.4" class="bubble-danger"><title>App\Core\Controller — Coverage: 0.0% | Lines: 5 | Complexity: 3</title></circle></a>
+ <a href="Core/Model.php.html#5"><circle cx="780.0" cy="333.5" r="4.0" class="bubble-success"><title>App\Core\Model — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+</svg>
+     </div>
+    </div>
+    <div class="col-md-6 dashboard-column">
+     <h3>&nbsp;</h3>
+     <p class="text-muted small">Sorted by descending CRAP (Change Risk Anti-Patterns) index.</p>
+     <div class="scrollbox">
+<table class="table">
+ <thead>
+  <tr>
+   <th>Class</th>
+   <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+   <th class="text-right">Coverage</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr><td><a href="Controllers/LoginController.php.html#8">App\Controllers\LoginController</a></td><td class="text-right">272</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Core/Core.php.html#4">App\Core\Core</a></td><td class="text-right">72</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Models/User.php.html#9">App\Models\User</a></td><td class="text-right">72</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Services/AuthService.php.html#8">App\Services\AuthService</a></td><td class="text-right">38.11</td><td class="text-right">22.2%</td></tr>
+  <tr><td><a href="Traits/CustomSearch.php.html#5">App\Traits\CustomSearch</a></td><td class="text-right">20</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Controllers/HomeController.php.html#9">App\Controllers\HomeController</a></td><td class="text-right">12</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Core/Controller.php.html#5">App\Core\Controller</a></td><td class="text-right">12</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Core/Model.php.html#5">App\Core\Model</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+ </tbody>
+</table>
+     </div>
+    </div>
+   </div>
+   <div class="row dashboard-row">
+    <div class="col-md-6">
+     <h3>Methods</h3>
+     <p class="text-muted small">Bubble size = executable lines. Hover for details, click to navigate.</p>
+     <div class="file-coverage-chart">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
+ <style>
+  .bubble-success { fill: var(--phpunit-success-bar); opacity: 0.7; }
+  .bubble-warning { fill: var(--phpunit-warning-bar); opacity: 0.7; }
+  .bubble-danger { fill: var(--phpunit-danger-bar); opacity: 0.7; }
+  .bubble-success:hover, .bubble-warning:hover, .bubble-danger:hover { opacity: 1; stroke: var(--bs-emphasis-color); stroke-width: 1.5; }
+  .chart-grid { stroke: var(--bs-border-color); stroke-width: 0.5; stroke-dasharray: 4,4; opacity: 0.5; }
+  .chart-axis { stroke: var(--bs-border-color); stroke-width: 1; }
+  .chart-label { fill: var(--bs-body-color); font-size: 11px; font-family: var(--bs-font-sans-serif, sans-serif); }
+  .chart-title { fill: var(--bs-body-color); font-size: 12px; font-family: var(--bs-font-sans-serif, sans-serif); }
+ </style>
+ <line x1="60.0" y1="20" x2="60.0" y2="350" class="chart-grid"/>
+ <text x="60.0" y="368" text-anchor="middle" class="chart-label">0%</text>
+ <line x1="204.0" y1="20" x2="204.0" y2="350" class="chart-grid"/>
+ <text x="204.0" y="368" text-anchor="middle" class="chart-label">20%</text>
+ <line x1="348.0" y1="20" x2="348.0" y2="350" class="chart-grid"/>
+ <text x="348.0" y="368" text-anchor="middle" class="chart-label">40%</text>
+ <line x1="492.0" y1="20" x2="492.0" y2="350" class="chart-grid"/>
+ <text x="492.0" y="368" text-anchor="middle" class="chart-label">60%</text>
+ <line x1="636.0" y1="20" x2="636.0" y2="350" class="chart-grid"/>
+ <text x="636.0" y="368" text-anchor="middle" class="chart-label">80%</text>
+ <line x1="780.0" y1="20" x2="780.0" y2="350" class="chart-grid"/>
+ <text x="780.0" y="368" text-anchor="middle" class="chart-label">100%</text>
+ <line x1="60" y1="350.0" x2="780" y2="350.0" class="chart-grid"/>
+ <text x="52" y="350.0" text-anchor="end" dominant-baseline="middle" class="chart-label">0</text>
+ <line x1="60" y1="240.0" x2="780" y2="240.0" class="chart-grid"/>
+ <text x="52" y="240.0" text-anchor="end" dominant-baseline="middle" class="chart-label">5</text>
+ <line x1="60" y1="130.0" x2="780" y2="130.0" class="chart-grid"/>
+ <text x="52" y="130.0" text-anchor="end" dominant-baseline="middle" class="chart-label">10</text>
+ <line x1="60" y1="20.0" x2="780" y2="20.0" class="chart-grid"/>
+ <text x="52" y="20.0" text-anchor="end" dominant-baseline="middle" class="chart-label">15</text>
+ <line x1="60" y1="20" x2="60" y2="350" class="chart-axis"/>
+ <line x1="60" y1="350" x2="780" y2="350" class="chart-axis"/>
+ <text x="420.0" y="395" text-anchor="middle" class="chart-title">Line Coverage (%)</text>
+ <text x="15" y="185.0" text-anchor="middle" transform="rotate(-90, 15, 185.0)" class="chart-title">Cyclomatic Complexity</text>
+ <a href="Controllers/LoginController.php.html#33"><circle cx="60.0" cy="108.0" r="20.0" class="bubble-danger"><title>App\Controllers\LoginController::createAccount — Coverage: 0.0% | Lines: 35 | Complexity: 11</title></circle></a>
+ <a href="Core/Core.php.html#5"><circle cx="60.0" cy="174.0" r="16.2" class="bubble-danger"><title>App\Core\Core::run — Coverage: 0.0% | Lines: 23 | Complexity: 8</title></circle></a>
+ <a href="Controllers/HomeController.php.html#16"><circle cx="60.0" cy="306.0" r="13.5" class="bubble-danger"><title>App\Controllers\HomeController::index — Coverage: 0.0% | Lines: 16 | Complexity: 2</title></circle></a>
+ <a href="Traits/CustomSearch.php.html#6"><circle cx="60.0" cy="262.0" r="12.6" class="bubble-danger"><title>App\Traits\CustomSearch::filtered — Coverage: 0.0% | Lines: 14 | Complexity: 4</title></circle></a>
+ <a href="Models/User.php.html#19"><circle cx="60.0" cy="284.0" r="12.2" class="bubble-danger"><title>App\Models\User::getAll — Coverage: 0.0% | Lines: 13 | Complexity: 3</title></circle></a>
+ <a href="Services/AuthService.php.html#21"><circle cx="60.0" cy="284.0" r="11.2" class="bubble-danger"><title>App\Services\AuthService::authenticate — Coverage: 0.0% | Lines: 11 | Complexity: 3</title></circle></a>
+ <a href="Controllers/LoginController.php.html#10"><circle cx="60.0" cy="262.0" r="10.7" class="bubble-danger"><title>App\Controllers\LoginController::index — Coverage: 0.0% | Lines: 10 | Complexity: 4</title></circle></a>
+ <a href="Models/User.php.html#45"><circle cx="60.0" cy="284.0" r="10.7" class="bubble-danger"><title>App\Models\User::getTotal — Coverage: 0.0% | Lines: 10 | Complexity: 3</title></circle></a>
+ <a href="Models/User.php.html#75"><circle cx="60.0" cy="328.0" r="8.3" class="bubble-danger"><title>App\Models\User::create — Coverage: 0.0% | Lines: 6 | Complexity: 1</title></circle></a>
+ <a href="Controllers/LoginController.php.html#89"><circle cx="60.0" cy="328.0" r="6.8" class="bubble-danger"><title>App\Controllers\LoginController::logout — Coverage: 0.0% | Lines: 4 | Complexity: 1</title></circle></a>
+ <a href="Models/User.php.html#67"><circle cx="60.0" cy="328.0" r="6.8" class="bubble-danger"><title>App\Models\User::emailExists — Coverage: 0.0% | Lines: 4 | Complexity: 1</title></circle></a>
+ <a href="Services/AuthService.php.html#14"><circle cx="60.0" cy="306.0" r="5.9" class="bubble-danger"><title>App\Services\AuthService::requireLogin — Coverage: 0.0% | Lines: 3 | Complexity: 2</title></circle></a>
+ <a href="Services/AuthService.php.html#43"><circle cx="780.0" cy="328.0" r="5.9" class="bubble-success"><title>App\Services\AuthService::logout — Coverage: 100.0% | Lines: 3 | Complexity: 1</title></circle></a>
+ <a href="Controllers/HomeController.php.html#11"><circle cx="60.0" cy="328.0" r="4.8" class="bubble-danger"><title>App\Controllers\HomeController::__construct — Coverage: 0.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Core/Controller.php.html#6"><circle cx="60.0" cy="328.0" r="4.8" class="bubble-danger"><title>App\Core\Controller::loadView — Coverage: 0.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Core/Controller.php.html#15"><circle cx="60.0" cy="328.0" r="4.8" class="bubble-danger"><title>App\Core\Controller::loadViewInTemplate — Coverage: 0.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Core/Model.php.html#8"><circle cx="780.0" cy="328.0" r="4.8" class="bubble-success"><title>App\Core\Model::__construct — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Core/Controller.php.html#11"><circle cx="60.0" cy="328.0" r="4.0" class="bubble-danger"><title>App\Core\Controller::loadMaster — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Services/AuthService.php.html#10"><circle cx="780.0" cy="306.0" r="4.0" class="bubble-success"><title>App\Services\AuthService::isLogged — Coverage: 100.0% | Lines: 1 | Complexity: 2</title></circle></a>
+</svg>
+     </div>
+    </div>
+    <div class="col-md-6 dashboard-column">
+     <h3>&nbsp;</h3>
+     <p class="text-muted small">Sorted by descending CRAP (Change Risk Anti-Patterns) index.</p>
+     <div class="scrollbox">
+<table class="table">
+ <thead>
+  <tr>
+   <th>Method</th>
+   <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+   <th class="text-right">Coverage</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr><td><a href="Controllers/LoginController.php.html#33">App\Controllers\LoginController::createAccount</a></td><td class="text-right">132</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Core/Core.php.html#5">App\Core\Core::run</a></td><td class="text-right">72</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Controllers/LoginController.php.html#10">App\Controllers\LoginController::index</a></td><td class="text-right">20</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Traits/CustomSearch.php.html#6">App\Traits\CustomSearch::filtered</a></td><td class="text-right">20</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Models/User.php.html#19">App\Models\User::getAll</a></td><td class="text-right">12</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Models/User.php.html#45">App\Models\User::getTotal</a></td><td class="text-right">12</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Services/AuthService.php.html#21">App\Services\AuthService::authenticate</a></td><td class="text-right">12</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Controllers/HomeController.php.html#16">App\Controllers\HomeController::index</a></td><td class="text-right">6</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Services/AuthService.php.html#14">App\Services\AuthService::requireLogin</a></td><td class="text-right">6</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Controllers/HomeController.php.html#11">App\Controllers\HomeController::__construct</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Controllers/LoginController.php.html#89">App\Controllers\LoginController::logout</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Core/Controller.php.html#6">App\Core\Controller::loadView</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Core/Controller.php.html#11">App\Core\Controller::loadMaster</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Core/Controller.php.html#15">App\Core\Controller::loadViewInTemplate</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Models/User.php.html#67">App\Models\User::emailExists</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Models/User.php.html#75">App\Models\User::create</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Services/AuthService.php.html#10">App\Services\AuthService::isLogged</a></td><td class="text-right">2</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Core/Model.php.html#8">App\Core\Model::__construct</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Services/AuthService.php.html#43">App\Services\AuthService::logout</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+ </tbody>
+</table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 14.1.9</a> using <a href="https://www.php.net/" target="_top">PHP 8.4.21</a> and <a href="https://phpunit.de/">PHPUnit 13.1.13</a> at Thu May 28 22:34:36 UTC 2026.</small>
+    </p>
+   </footer>
+  </div>
+ </body>
+</html>
